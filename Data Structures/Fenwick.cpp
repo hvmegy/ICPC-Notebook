@@ -6,10 +6,8 @@ struct fenwick {
 		f.resize(n + 1); 
 	}
 	void add(int i, T v) { 
-		dbg(i); 
 		for (; i <= n; i += i & -i) {
 			f[i] += v; 
-			dbg(i, v); 
 		}
 	}
 	T get(int i) { 
